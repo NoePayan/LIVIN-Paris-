@@ -1,2 +1,28 @@
-# LIVIN-Paris-
-A C# application for sharing meals between neighbors in Paris. The application manages customers, cooks, meals, orders, and deliveries.  The project uses object-oriented programming, a SQL database, and graph algorithms to calculate the shortest routes between customers and cooks
+# Livin Paris
+
+## Overview
+
+Livin Paris is a C# application designed to manage meal sharing between neighbors in Paris.
+
+The application connects customers and cooks, allowing users to manage meals, orders, deliveries, and addresses.
+
+## Features
+
+- Customer management
+- Cook management
+- Meal management
+- Order management
+- Delivery management
+- SQL database integration
+- Route calculation between customers and cooks
+- Shortest-path algorithms using graph structures
+
+## Technologies
+
+- C#
+- .NET
+- Visual Studio
+- SQL
+- Object-oriented programming
+- Graph algorithms
+
