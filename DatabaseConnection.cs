@@ -15,13 +15,21 @@ namespace LivInParis.Data
     /// </summary>
     public class DatabaseConnection
     {
-        private static string connectionString = "Server=localhost;Database=livinparis;Uid=root;Pwd=g$MViF6iX;";
+        /// <summary>
+        /// Chaîne de connexion lue dans la variable d'environnement LIVINPARIS_DB
+        /// (voir .env.example). Aucun mot de passe n'est stocké dans le code.
+        /// </summary>
+        private static string ConnectionString =>
+            Environment.GetEnvironmentVariable("LIVINPARIS_DB")
+            ?? throw new InvalidOperationException(
+                "La variable d'environnement LIVINPARIS_DB n'est pas définie. " +
+                "Exemple : Server=localhost;Database=livinparis;Uid=root;Pwd=VOTRE_MOT_DE_PASSE;");
 
         public static MySqlConnection GetConnection()
         {
             try
             {
-                MySqlConnection connection = new MySqlConnection(connectionString);
+                MySqlConnection connection = new MySqlConnection(ConnectionString);
                 return connection;
             }
             catch (Exception ex)
